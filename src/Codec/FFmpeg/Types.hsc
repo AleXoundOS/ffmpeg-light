@@ -113,6 +113,7 @@ newtype AVFrame = AVFrame (Ptr ()) deriving (Storable, HasPtr)
 #mkField Pts, CLong
 #mkField PktPts, CLong
 #mkField LineSize, CInt
+#mkField KeyFrame, Bool
 
 #hasField AVFrame, PixelFormat, format
 #hasField AVFrame, Width, width
@@ -121,6 +122,7 @@ newtype AVFrame = AVFrame (Ptr ()) deriving (Storable, HasPtr)
 #hasField AVFrame, Pts, pts
 #hasField AVFrame, PktPts, pkt_pts
 #hasField AVFrame, Data, data
+#hasField AVFrame, KeyFrame, key_frame
 
 newtype AVPicture = AVPicture (Ptr ()) deriving (Storable, HasPtr)
 #hasField AVPicture, Data, data
